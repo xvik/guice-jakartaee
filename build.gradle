@@ -47,8 +47,23 @@ allprojects {
 
     github {
         user = 'xvik'
-        license = 'MIT'
+        license = 'Apache'
         repository = 'guice-jakartaee'
+    }
+
+    // delay required because java plugin is activated only in subprojects and without it
+    // pom closure would reference root project only
+    afterEvaluate {
+        pom {
+            // developers section is required for central publication
+            developers {
+                developer {
+                    id 'crazybob'
+                    name 'Bob Lee'
+                    email 'crazybob@google.com'
+                }
+            }
+        }
     }
 
     // don't publish gradle metadata artifact
