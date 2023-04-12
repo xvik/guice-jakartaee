@@ -1,0 +1,14 @@
+// https://mvnrepository.com/artifact/com.google.inject.extensions/guice-jmx/5.1.0
+dependencies {
+    shadowed("com.google.inject.extensions:guice-jmx:$guice:sources") { transitive = false }
+
+    implementation project(':guice')
+}
+
+jar {
+    manifest {
+        attributes 'Export-Package': 'com.google.inject.tools.jmx;version="1.4"',
+                'Fragment-Host': 'com.google.inject',
+                'Import-Package': 'javax.management'
+    }
+}

@@ -1,0 +1,18 @@
+// https://mvnrepository.com/artifact/com.google.inject.extensions/guice-testlib/5.1.0
+dependencies {
+    shadowed("com.google.inject.extensions:guice-testlib:$guice:sources") { transitive = false }
+
+    api project(':guice-throwingproviders')
+    api 'com.google.truth:truth:0.45'
+}
+
+jar {
+    manifest {
+        attributes 'Export-Package': 'com.google.inject.testing.fieldbinder;version="1.4",co' +
+                'm.google.inject.testing.throwingproviders;version="1.4"',
+                'Fragment-Host': 'com.google.inject',
+                'Import-Package': 'com.google.common.base;version="[30.1,31)",com.google.' +
+                        'common.collect;version="[30.1,31)",com.google.common.truth,javax.anno' +
+                        'tation;version="[3.0,4)",jakarta.inject'
+    }
+}

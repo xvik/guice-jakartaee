@@ -1,0 +1,12 @@
+rootProject.name = 'guice-jakartaee'
+
+include 'guice',
+        'guice-servlet',
+        'guice-assistedinject',
+        'guice-persist',
+        'guice-throwingproviders',
+        'guice-grapher',
+        'guice-jmx',
+        'guice-testlib',
+        'guice-jndi'
+

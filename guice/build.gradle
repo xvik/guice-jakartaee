@@ -1,0 +1,34 @@
+// https://mvnrepository.com/artifact/com.google.inject/guice/5.1.0
+dependencies {
+    // use version WITHOUT shadowed asm
+    shadowed("com.google.inject:guice:$guice:sources") { transitive = false }
+
+    api 'aopalliance:aopalliance:1.0'
+
+    // asm goes as separate dependency to simplify upgrade
+    api 'org.ow2.asm:asm:9.2'
+    api 'com.google.guava:guava:30.1-jre'
+    api 'jakarta.inject:jakarta.inject-api:2.0.1'
+}
+
+// re-creation of guice manifest
+javaLib {
+    autoModuleName = 'com.google.guice'
+}
+
+jar {
+    manifest {
+        attributes 'Bundle-SymbolicName': 'com.google.inject',
+                'Export-Package': 'com.google.inject;version="1.4",com.google.inject.bind' +
+                        'er;version="1.4",com.google.inject.matcher;version="1.4",com.google.i' +
+                        'nject.multibindings;version="1.4",com.google.inject.name;version="1.4' +
+                        '",com.google.inject.spi;version="1.4",com.google.inject.util;version=' +
+                        '"1.4"',
+                'Import-Package': 'com.google.common.base;version="[30.1,31)",com.google.' +
+                        'common.cache;version="[30.1,31)",com.google.common.collect;version="[' +
+                        '30.1,31)",com.google.common.primitives;version="[30.1,31)",com.google' +
+                        '.errorprone.annotations,javax.annotation;version="[3.0,4)",jakarta.in' +
+                        'ject,org.aopalliance.intercept',
+                'Require-Capability': 'osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"'
+    }
+}

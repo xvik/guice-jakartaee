@@ -1,0 +1,20 @@
+// https://mvnrepository.com/artifact/com.google.inject.extensions/guice-persist/5.1.0
+dependencies {
+    shadowed("com.google.inject.extensions:guice-persist:$guice:sources") { transitive = false }
+
+    api project(':guice')
+    api 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+    api 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+}
+
+jar {
+    manifest {
+        attributes 'Export-Package': 'com.google.inject.persist;version="1.4",com.google.inj' +
+                'ect.persist.finder;version="1.4",com.google.inject.persist.jpa;versio' +
+                'n="1.4"',
+                'Fragment-Host': 'com.google.inject',
+                'Import-Package': 'com.google.common.base;version="[30.1,31)",com.google.' +
+                        'common.collect;version="[30.1,31)",jakarta.inject,jakarta.persistence,jak' +
+                        'arta.servlet,org.aopalliance.intercept'
+    }
+}

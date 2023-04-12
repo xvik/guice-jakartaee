@@ -1,0 +1,14 @@
+// https://mvnrepository.com/artifact/com.google.inject.extensions/guice-jndi/5.1.0
+dependencies {
+    shadowed("com.google.inject.extensions:guice-jndi:$guice:sources") { transitive = false }
+
+    api project(':guice')
+}
+
+jar {
+    manifest {
+        attributes 'Export-Package': 'com.google.inject.jndi;version="1.4"',
+                'Fragment-Host': 'com.google.inject',
+                'Import-Package': 'javax.naming'
+    }
+}
