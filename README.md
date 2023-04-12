@@ -12,9 +12,12 @@ and re-publish converted jars into maven central (with different group).
 
 Migrated apis:
 
-* jakarta.inject (all)
+* jakarta.inject (all modules)
 * jakarta.servlet (guice-servlet)
 * jakarta.persistence (guice-persist)
+
+Migration project was created for [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey) to make it compatible
+with dropwizard 4.
 
 ## Attention
 
@@ -34,9 +37,14 @@ The simplest migration startegy for 3rd party guice libraries is to avoid `javax
 native guice `com.google.inject` annotations instead. This way library would be compatible with both javax and jakarta 
 namespaces.
 
-**No need** to depend libraries on this re-packaged guice versions - simply avoid javax usage.
+**No need** to depend libraries on this re-packaged guice version - simply avoid javax usage.
 
 ## Setup
+
+**Currently published 5.1.0-rc.1 in order to gather feedback** and finally release 5.1.0 without issues (in order to strictly follow guice version).
+Where problems could be: wrong dependencies in POM, incorrect METADATA (for OSGI)
+
+[![Maven Central](https://img.shields.io/maven-central/v/ru.vyarus.guice.jakarta/guice.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/ru.vyarus.guice.jakarta/guice)
                                                         
 IMPORTANT: guice jar does not bundle asm version (like `com.google.inject:guice:5.1.0:classes`)
 dependency, so you can easily upgrade asm version, if you need.
@@ -45,7 +53,7 @@ Gradle:
 
 ```groovy
 dependencies {
-    implementation platform('ru.vyarus.guice.jakarta:guice-bom:5.1.0')
+    implementation platform('ru.vyarus.guice.jakarta:guice-bom:5.1.0-rc.1')
 
     implementation 'ru.vyarus.guice.jakarta:guice'
     implementation 'ru.vyarus.guice.jakarta:guice-servlet'
@@ -60,7 +68,7 @@ Maven:
         <dependency>
             <groupId>ru.vyarus.guice.jakarta</groupId>
             <artifactId>guice-bom</artifactId>
-            <version>5.1.0</version>
+            <version>5.1.0-rc.1</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>          
