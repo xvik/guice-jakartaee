@@ -43,7 +43,7 @@ allprojects {
         hk2 = '3.0.3'
     }
 
-    group 'ru.vyarus.guice.jakarta.inject'
+    group 'ru.vyarus.guice.jakarta'
 
     github {
         user = 'xvik'
