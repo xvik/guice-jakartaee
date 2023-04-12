@@ -28,6 +28,14 @@ it **must** also not use `javax.inject` classes or guice might work incorrectly.
 For gradle, there is [a special plugin](https://github.com/nebula-plugins/gradle-jakartaee-migration-plugin) 
 which could convert dependencies automatically (assuming you building application and bundle all dependencies in it).
 
+### For library authors
+
+The simplest migration startegy for 3rd party guice libraries is to avoid `javax.inject` annotations and use 
+native guice `com.google.inject` annotations instead. This way library would be compatible with both javax and jakarta 
+namespaces.
+
+**No need** to depend libraries on this re-packaged guice versions - simply avoid javax usage.
+
 ## Setup
                                                         
 IMPORTANT: guice jar does not bundle asm version (like `com.google.inject:guice:5.1.0:classes`)
