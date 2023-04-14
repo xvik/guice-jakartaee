@@ -93,15 +93,15 @@ Dependencies could, of course, be used without BOM too.
 
 Original (javax.) dependency           |  Migrated (jakarta.) dependency
 --------------|-------------------------
-[com.google.inject:guice-bom](https://mvnrepository.com/artifact/com.google.inject/guice-bom/5.1.0) | ru.vyarus.guice.jakarta:guice-bom
-[com.google.inject:guice](https://mvnrepository.com/artifact/com.google.inject/guice/5.1.0) | ru.vyarus.guice.jakarta:guice
-[com.google.inject.extensions:guice-assistedinject](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-assistedinject/5.1.0) | ru.vyarus.guice.jakarta:guice-assistedinject
-[com.google.inject.extensions:guice-grapher](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-grapher/5.1.0) | ru.vyarus.guice.jakarta:guice-grapher
-[com.google.inject.extensions:guice-jmx](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-jmx/5.1.0) | ru.vyarus.guice.jakarta:guice-jmx
-[com.google.inject.extensions:guice-jndi](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-jndi/5.1.0) | ru.vyarus.guice.jakarta:guice-jndi
-[com.google.inject.extensions:guice-persist](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-persist/5.1.0) | ru.vyarus.guice.jakarta:guice-persist
-[com.google.inject.extensions:guice-servlet](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-servlet/5.1.0) | ru.vyarus.guice.jakarta:guice-servlet
-[com.google.inject.extensions:guice-testlib](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-testlib/5.1.0) | ru.vyarus.guice.jakarta:guice-testlib
-[com.google.inject.extensions:guice-throwingproviders](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-throwingproviders/5.1.0) | ru.vyarus.guice.jakarta:guice-throwingproviders
+[com.google.inject:guice-bom](https://mvnrepository.com/artifact/com.google.inject/guice-bom/5.1.0) | [ru.vyarus.guice.jakarta:guice-bom](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-bom/5.1.0-rc.1)
+[com.google.inject:guice](https://mvnrepository.com/artifact/com.google.inject/guice/5.1.0) | [ru.vyarus.guice.jakarta:guice](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice/5.1.0-rc.1)
+[com.google.inject.extensions:guice-assistedinject](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-assistedinject/5.1.0) | [ru.vyarus.guice.jakarta:guice-assistedinject](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-assistedinject/5.1.0-rc.1)
+[com.google.inject.extensions:guice-grapher](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-grapher/5.1.0) | [ru.vyarus.guice.jakarta:guice-grapher](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-grapher/5.1.0-rc.1)
+[com.google.inject.extensions:guice-jmx](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-jmx/5.1.0) | [ru.vyarus.guice.jakarta:guice-jmx](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-jmx/5.1.0-rc.1)
+[com.google.inject.extensions:guice-jndi](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-jndi/5.1.0) | [ru.vyarus.guice.jakarta:guice-jndi](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-jndi/5.1.0-rc.1)
+[com.google.inject.extensions:guice-persist](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-persist/5.1.0) | [ru.vyarus.guice.jakarta:guice-persist](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-persist/5.1.0-rc.1)
+[com.google.inject.extensions:guice-servlet](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-servlet/5.1.0) | [ru.vyarus.guice.jakarta:guice-servlet](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-servlet/5.1.0-rc.1)
+[com.google.inject.extensions:guice-testlib](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-testlib/5.1.0) | [ru.vyarus.guice.jakarta:guice-testlib](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-testlib/5.1.0-rc.1)
+[com.google.inject.extensions:guice-throwingproviders](https://mvnrepository.com/artifact/com.google.inject.extensions/guice-throwingproviders/5.1.0) | [ru.vyarus.guice.jakarta:guice-throwingproviders](https://mvnrepository.com/artifact/ru.vyarus.guice.jakarta/guice-throwingproviders/5.1.0-rc.1)
 
 NOTE: spring and struct2 modules are missed (anyone need them?)
