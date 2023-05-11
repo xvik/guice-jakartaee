@@ -1,5 +1,7 @@
 # Guice converted to jakarta namespace
 
+**DEPRECATED** [Guice 7](https://github.com/google/guice/wiki/Guice700) introduced native jakarta support.
+
 [Google guice](https://github.com/google/guice) does [not support jakarta namespace yet](https://github.com/google/guice/issues/1383).
 
 This project is **not a fork**. It just converts guice automatically using [tomcat migration tool](https://github.com/apache/tomcat-jakartaee-migration)
